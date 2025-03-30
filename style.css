@@ -1,0 +1,5 @@
+body {
+  background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
+    linear-gradient(to bottom, lightgray 1px, transparent 1px);
+  background-size: 25px 25px; /* Розмір клітинки */
+}
