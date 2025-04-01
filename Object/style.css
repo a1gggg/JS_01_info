@@ -4,7 +4,7 @@ body {
   background-size: 25px 25px; /* Розмір клітинки */
 }
 p1 {
-  font-family: 'Courier New', Courier, monospace;/* Шрифт */
+  font-family: 'Courier New', monospace;/* Шрифт */
   font-size: 15px;/* Розмір шрифта */
   color: rgb(2, 60, 16);/* Колір тексту */
   text-align: center;/* Вирівнювання по центру */
