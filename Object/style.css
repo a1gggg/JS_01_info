@@ -1,9 +1,9 @@
-body {
+/*body {
   background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
     linear-gradient(to bottom, lightgray 1px, transparent 1px);
   background-size: 25px 25px; /* Розмір клітинки */
 }
-p1 {
+/*p1 {
   font-family: 'Courier New', Courier, monospace;/* Шрифт */
   font-size: 15px;/* Розмір шрифта */
   color: rgb(2, 60, 16);/* Колір тексту */
@@ -18,7 +18,7 @@ p1 {
   /**border-radius: 1px; /* Радіус округлення */
   font-style: italic
 }
-p {
+/*p {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   color: rgb(0, 0, 0);
@@ -26,7 +26,7 @@ p {
   margin-left: 1%;
   font-weight: bold;
 }
-table {
+/*table {
   border-collapse: collapse; /* Зливаючи рамки */
   margin: left; /* Вирівнювання по центру */
   margin-top: 20px; /* Відступ зверху */
