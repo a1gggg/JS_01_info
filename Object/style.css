@@ -3,3 +3,33 @@ body {
     linear-gradient(to bottom, lightgray 1px, transparent 1px);
   background-size: 25px 25px; /* Розмір клітинки */
 }
+p1 {
+  font-family: 'Courier New', Courier, monospace;/* Шрифт */
+  font-size: 15px;/* Розмір шрифта */
+  color: rgb(2, 60, 16);/* Колір тексту */
+  text-align: center;/* Вирівнювання по центру */
+  margin-top: 10px; /* Відступ зверху */
+  margin-left: 3%; /* Відступ зліва */
+  font-weight: bold; /* Жирний шрифт */
+  /**width: 1px;	height: 1px; /* Розмір */
+  /**background: rgba(255, 204, 0, 0); /* Колір фону */
+  /**outline: 2px solid #000; /* Чорна рамка */
+  /**border: 3px solid #fff; /* Біла рамка */
+  /**border-radius: 1px; /* Радіус округлення */
+  font-style: italic
+}
+p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+  margin-left: 1%;
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse; /* Зливаючи рамки */
+  margin: left; /* Вирівнювання по центру */
+  margin-top: 20px; /* Відступ зверху */
+  border-radius: 10px; /* Радіус округлення */
+  border: 2px solid #000; /* Чорна рамка */
+}
