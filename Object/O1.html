@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Літерали та властивості</title>
+  <h1>Літерали та властивості</h1>
+  <link rel="stylesheet" href="\style_indexhtml.css">
+ 
+</head>
+<body>
+
+  <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
+
+  <button url="https://a1gggg.github.io/JS_01_info/index.html/">НА ГОЛОВНУ</button>
+
+  <button type="button" onclick="https://a1gggg.github.io/JS_01_info/index.html/">НА ГОЛОВНУ</button>
+  
+
+  <p>Створення пустого об'єкту без ідентифікатора та значення.:</p>
+  <table>
+    <tr>
+      <td>
+        <p1>1. let user = new Object(); </br>// синтаксис "конструктора об’єктів"          
+        </p1>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <p1>2. let user = {};  </br>// синтаксис "літералу об’єкта"
+         </p1>
+      </td>
+    </tr>
+  </table>
+ 
+  <p>Створення об'єкту за допомогою синтаксису літералу з ідентифікатором та значенням:</p>
+  <table>
+    <tr>
+      <td>
+        <p1>let user = { </br> &nbsp; &nbsp; &nbsp;name: "John", </br> &nbsp; &nbsp; &nbsp;age: 30</br> &nbsp; &nbsp;}; </br>// об'єкт з ідентифікатором name та age та значеннями "John" та 30. В даному випадку "John" відноситься до рядків (string), а 30 до числа (number)
+        </p1>
+      </td>
+    </tr>
+  </table>
+    <p>Додавання значення:</p>
+    <table>
+      <tr>
+        <td>
+          <p1>object.key = value; </br> // object - назва об'єкта, key - назва ключа, value - значення;</br>// враховуючи попередній приклад, це може бути user.isAdmin = true;
+          </p1>
+        </td>
+      </tr>
+    </table>
+
+    <p>Видалення значення:</p>
+    <table>
+      <tr>
+        <td>
+          <p1>delete object.key; </br> // object - назва об'єкта, key - назва ключа, який потрібно видалити;</br>// враховуючи попередній приклад, це може бути delete user.age при якому видаляється ключ age з об'єкта user зі значенням 30;
+          </p1>
+        </td>
+      </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+  <script src="script_ObjectJS.js"></script>
+</body>
+</html>
