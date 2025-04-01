@@ -10,7 +10,7 @@ p1 {
   text-align: center;/* Вирівнювання по центру */
   margin-top: 10px; /* Відступ зверху */
   margin-left: 3%; /* Відступ зліва */
-  font-weight: bold; /* Жирний шрифт */
+  /**font-weight: bold; /* Жирний шрифт */
   /**width: 1px;	height: 1px; /* Розмір */
   /**background: rgba(255, 204, 0, 0); /* Колір фону */
   /**outline: 2px solid #000; /* Чорна рамка */
