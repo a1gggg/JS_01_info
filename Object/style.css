@@ -32,4 +32,5 @@ table {
   margin-top: 20px; /* Відступ зверху */
   border-radius: 10px; /* Радіус округлення */
   border: 2px solid #000; /* Чорна рамка */
+  background-color: rgba(255, 255, 255, 0.8); /* Колір фону */
 }
