@@ -2,6 +2,7 @@ body {
   background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
     linear-gradient(to bottom, lightgray 1px, transparent 1px);
   background-size: 25px 25px; /* Розмір клітинки */
+  margin-left: 5%; /* Відступ зліва */
 }
 p1 {
   font-family: 'Courier New', monospace;/* Шрифт */
@@ -20,7 +21,7 @@ p1 {
 }
 p {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(0, 0, 0);
   margin-top: 20px;
   margin-left: 1%;
