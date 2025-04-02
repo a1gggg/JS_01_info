@@ -3,14 +3,32 @@ body {
     linear-gradient(to bottom, lightgray 1px, transparent 1px);
   background-size: 25px 25px; /* Розмір клітинки */
   margin-left: 5%; /* Відступ зліва */
+  margin-right: 5%; /* Відступ справа */
 }
+
+p2 {
+  font-family: 'Courier New',Courier, monospace;/* Шрифт */
+  font-size: 18px;/* Розмір шрифта */
+  color: rgb(120, 0, 0);/* Колір тексту */
+  text-align: center;/* Вирівнювання по центру */
+  margin-top: 10px; /* Відступ зверху */
+  margin-left: 3%; /* Відступ зліва */
+  font-weight: bold; /* Жирний шрифт */
+  /**width: 1px;	height: 1px; /* Розмір */
+  /**background: rgba(255, 204, 0, 0); /* Колір фону */
+  /**outline: 2px solid #000; /* Чорна рамка */
+  /**border: 3px solid #fff; /* Біла рамка */
+  /**border-radius: 1px; /* Радіус округлення */
+  font-style: italic
+}
+
 p1 {
   font-family: 'Courier New',Courier, monospace;/* Шрифт */
   font-size: 15px;/* Розмір шрифта */
   color: rgb(2, 60, 16);/* Колір тексту */
   text-align: center;/* Вирівнювання по центру */
   margin-top: 10px; /* Відступ зверху */
-  margin-left: 3%; /* Відступ зліва */
+  margin-left: 0%; /* Відступ зліва */
   font-weight: bold; /* Жирний шрифт */
   /**width: 1px;	height: 1px; /* Розмір */
   /**background: rgba(255, 204, 0, 0); /* Колір фону */
@@ -35,7 +53,7 @@ table {
   border: 2px solid #000; /* Чорна рамка */
   background-color: rgba(255, 255, 255, 0.8); /* Колір фону */
   max-width: auto; /* Максимальна ширина таблиці */
-  min-width: 95%; /* Мінімальна ширина таблиці */
+  min-width: 100%; /* Мінімальна ширина таблиці */
   word-break: break-all;
 }
 h1 {
@@ -48,7 +66,7 @@ h1 {
 }
 button {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(0, 0, 0);
   font-weight: bold;
   border-collapse: collapse; /* Зливаючи рамки */
@@ -59,4 +77,34 @@ button {
   background-color: rgba(255, 255, 255, 0.8); /* Колір фону */
   width: auto; 
 
+}
+.btn-up {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  right: 15px;
+  bottom: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.btn-up::before {
+  content: "";
+width: 30px;
+height: 30px;
+background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: rgb(125, 125, 125);
+  }
 }

@@ -11,51 +11,219 @@
 
   <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
 
-  <button url="https://a1gggg.github.io/JS_01_info/index.html/">НА ГОЛОВНУ</button>
 
-  <button type="button" onclick="https://a1gggg.github.io/JS_01_info/index.html/">НА ГОЛОВНУ!!!!!!!</button>
   
-  <p>Створення пустого об'єкту без ідентифікатора та значення.:</p>
+  <p>
+    Створення пустого об'єкту без ідентифікатора та значення.:
+  </p>
   <table>
     <tr>
       <td>
-        <p1>1. let user = new Object(); </br>// синтаксис "конструктора об’єктів"          
+        <p2>
+          1. let user = new Object();
+        </p2>
+      <br>  
+        <p1>
+          // синтаксис "конструктора об’єктів" 
         </p1>
       </td>
     </tr>
     <tr>
       <td> 
-        <p1>2. let user = {};  </br>// синтаксис "літералу об’єкта"
-         </p1>
+         <p2>
+          2. let user = {};
+         </p2>
+        <br>  
+          <p1>
+            // синтаксис "літералу об’єкта"
+          </p1>
       </td>
     </tr>
   </table>
  
-  <p>Створення об'єкту за допомогою синтаксису літералу з ідентифікатором та значенням:</p>
+  <p>
+    Створення об'єкту за допомогою синтаксису літералу з ідентифікатором та значенням:
+  </p>
   <table>
     <tr>
       <td>
-        <p1>let user = { </br> &nbsp; &nbsp; &nbsp;name: "John", </br> &nbsp; &nbsp; &nbsp;age: 30</br> &nbsp; &nbsp;}; </br>// об'єкт з ідентифікатором name та age та значеннями "John" та 30. В даному випадку "John" відноситься до рядків (string), а 30 до числа (number)
+        <p2>
+          let user = { </br> &nbsp; &nbsp; &nbsp;name: "John", </br> &nbsp; &nbsp; &nbsp;age: 30</br> &nbsp; &nbsp;};
+        </p2>
+      <br>
+        <p1>
+          // об'єкт з ідентифікатором name та age та значеннями "John" та 30. В даному випадку "John" відноситься до рядків (string), а 30 до числа (number)
         </p1>
       </td>
     </tr>
   </table>
-    <p>Додавання значення:</p>
+
+    <p>
+      Додавання значення:
+    </p>
     <table>
       <tr>
         <td>
-          <p1>object.key = value; </br> // object - назва об'єкта, key - назва ключа, value - значення;</br>// враховуючи попередній приклад, це може бути user.isAdmin = true;
+          <p2>
+            object.key = value; 
+          </p2>
+        <br> 
+          <p1>
+           // object - назва об'єкта, key - назва ключа, value - значення;
+          </br>
+           // враховуючи попередній приклад, це може бути user.isAdmin = true;
+          </p1>
+        </br>
+          <p2>
+            object["key 1"] = value;  
+          </p2>
+        <br> 
+          <p1>
+           // синтаксис дозволяє будь які лапки [" "] або [' '] або [` `] та  використовується, якщо назва ключа містить пробіл або починається з цифри;
+          </br>
+           // в такому разі в обєкті це буде виглядати як "is Admin" = true, або 'is Admin' = true, або `is Admin` = true,
           </p1>
         </td>
       </tr>
     </table>
 
-    <p>Видалення значення:</p>
+    <p>
+      Виклик значення:
+    </p>
     <table>
       <tr>
         <td>
-          <p1>delete object.key; </br> // object - назва об'єкта, key - назва ключа, який потрібно видалити;</br>// враховуючи попередній приклад, це може бути delete user.age при якому видаляється ключ age з об'єкта user зі значенням 30;
+          <p2>
+            object.key 
+          </p2>
+        <br> 
+          <p1>
+           // застосовується для виклику значення з об'єкта object {key = value,} - наприклад alert( user.isAdmin );
           </p1>
+        </br>
+          <p2>
+            object["key 1"]
+          </p2>
+        <br> 
+          <p1>
+            // застосовується для виклику значення з об'єкта object {"key 1" = value,} - наприклад alert( user["is Admin] );
+          </p1>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      Видалення значення:
+    </p>
+    <table>
+      <tr>
+        <td>
+          <p2>
+            delete object.key;
+          </p2>
+        <br> 
+        <p1>
+          // object - назва об'єкта, key - назва ключа, який потрібно видалити;
+        <br>
+        // враховуючи попередній приклад, це може бути delete user.isAdmin при якому видаляється ключ isAdmin з об'єкта user зі значенням true;
+        </p1>
+        <br> 
+          <p2>
+            delete object["key"];
+          </p2>
+        <br> 
+          <p1>
+        // враховуючи попередній приклад, це може бути delete user.["is Admin"] при якому видаляється ключ "is Admin" з об'єкта user зі значенням true;
+          </p1>
+          <p2>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      Призначення змінній значення з ключа, який міститься в об'єкті:
+    </p>
+    <table>
+      <tr>
+        <td>
+          <p2>
+            let key = "is Admin";
+          </p2>
+        <br> 
+        <p1>
+          // в такому разі не пов'язана з об'єктом змінна key отримує значення true з is Admin об'єкта user; Для виклику використовується синтаксис з застосуванням дужок [] </p1> <p2>user[key] = true;</p2>
+          
+        </td>
+      </tr>
+    </table>
+
+
+    <p>
+      Обчислення та отримання доступу до значення об'єкта за допомогою []:
+    </p>
+    <table>
+      <tr>
+        <td>
+          <p2>
+            let user = {
+            <br> &nbsp; &nbsp; &nbsp;
+              name: "Іван",
+            <br> &nbsp; &nbsp; &nbsp;
+              age: 30
+            <br> &nbsp; &nbsp; &nbsp;
+            };
+            <br><br>  &nbsp; &nbsp; &nbsp;
+            let key = prompt("Що ви хочете знати про користувача?", "name");
+            <br><br>  &nbsp; &nbsp; &nbsp;            
+            alert( user[key] ); // Іван (якщо ввести "name")
+          </p2>
+        <br> 
+        <p1>
+          // Синтаксис з використанням квадратних дужок [] нам дозволяє передати значення, яке буде взяте змінною key з введенного в prompt. Наприклад, якщо в prompt введено name, воно передається змінній key, а при використанні синтаксису user[key] замість key обчислюється name і в результаті ми отримуємо  значення "Іван" з об'єкту user. Якщо в prompt ввести age, то в результаті отримаємо 30. 
+        </p1>
+          
+        </td>
+      </tr>
+    </table>
+ 
+    <p>
+      Заміна ключа в об'єкті за допомогою квадратних дужок []:
+    </p>
+    <table>
+      <tr>
+        <td>
+          <p2>
+            let fruit = prompt("Які фрукти купити?", "apple");
+            <br> &nbsp; &nbsp; &nbsp;
+            let bag = {
+              <br> &nbsp; &nbsp; &nbsp;
+              [fruit]: 5, // назву властивості взято зі змінної fruit
+              <br> &nbsp; &nbsp; &nbsp;
+         };
+            <br><br> &nbsp; &nbsp; &nbsp;
+            alert( bag.apple ); // 5 якщо fruit="apple"
+            </p2>
+            <br>
+         <p1>
+          // Синтаксис з використанням квадратних дужок [] навколо ключа в об'єкті (в даному випадку [fruit]) нам дозволяє передати значення, яке буде взяте змінною fruit з введенного в prompt. Наприклад, якщо в prompt введено apple, воно передається змінній fruit, і при використанні синтаксису bag.apple ми отримаємо значення 5. Якщо буде введено pear, то в результаті отримаємо undefined. Значення обчислюваної властивості просте: [fruit] означає, що назву властивості слід брати з fruit. І якщо відвідувач введе слово "apple", то в об’єкті bag тепер буде лежати властивість {apple: 5}.
+        </p1>
+        <br><br>
+        <p1>По суті, це працює так само як:</p1>
+        <br>
+        <p2>
+          let fruit = prompt("Які фрукти купити?", "apple");
+          <br> &nbsp; &nbsp; 
+          let bag = {};
+        </p2>
+          <br>
+          <p1> 
+          // назву властивості взято зі змінної fruit
+          <br> 
+          </p1>
+          <p2>
+          bag[fruit] = 5;
+          <br>
+        </p2>
         </td>
       </tr>
     </table>
@@ -66,9 +234,46 @@
 
 
 
+    <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
+    <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
 
 
-
+  <br>
+  <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
   <script src="script_ObjectJS.js"></script>
+  <div class="btn-up btn-up_hide"></div>
+
+  <script>
+    const btnUp = {
+      el: document.querySelector('.btn-up'),
+      show() {
+        // удалим у кнопки класс btn-up_hide
+        this.el.classList.remove('btn-up_hide');
+      },
+      hide() {
+        // добавим к кнопке класс btn-up_hide
+        this.el.classList.add('btn-up_hide');
+      },
+      addEventListener() {
+        // при прокрутке содержимого страницы
+        window.addEventListener('scroll', () => {
+          // определяем величину прокрутки
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+          scrollY > 400 ? this.show() : this.hide();
+        });
+        // при нажатии на кнопку .btn-up
+        document.querySelector('.btn-up').onclick = () => {
+          // переместим в начало страницы
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+    btnUp.addEventListener();
+    </script>
 </body>
 </html>
