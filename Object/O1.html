@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Літерали та властивості</title>
-  <h1>Літерали та властивості</h1>
+  <title>Об'єкти основи</title>
+  <h1>Об'єкти основи</h1>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
-
-
-  
   <p>
     Створення пустого об'єкту без ідентифікатора та значення.:
   </p>
@@ -22,12 +18,12 @@
         <p2>
           1. let user = new Object();
         </p2>
-      <br>  
+      <br>
         <p1>
           // синтаксис "конструктора об’єктів" 
         </p1>
       </td>
-    </tr>
+    </tr> 
     <tr>
       <td> 
          <p2>
@@ -58,9 +54,9 @@
     </tr>
   </table>
 
-    <p>
+  <p>
       Додавання значення:
-    </p>
+  </p>
     <table>
       <tr>
         <td>
@@ -194,13 +190,13 @@
         <td>
           <p2>
             let fruit = prompt("Які фрукти купити?", "apple");
-            <br> &nbsp; &nbsp; &nbsp;
+            <br><br> &nbsp; &nbsp;  
             let bag = {
-              <br> &nbsp; &nbsp; &nbsp;
+              <br> &nbsp; &nbsp; &nbsp; 
               [fruit]: 5, // назву властивості взято зі змінної fruit
-              <br> &nbsp; &nbsp; &nbsp;
+              <br> &nbsp; &nbsp;  
          };
-            <br><br> &nbsp; &nbsp; &nbsp;
+            <br><br> &nbsp; &nbsp;  
             alert( bag.apple ); // 5 якщо fruit="apple"
             </p2>
             <br>
@@ -228,9 +224,9 @@
         <br>
         <p2>
           let fruit = 'apple';
-          <br> &nbsp; &nbsp; 
+          <br><br>  &nbsp; &nbsp; 
 let bag = {
-  <br> &nbsp; &nbsp; 
+  <br> &nbsp; &nbsp; &nbsp; 
   [fruit + 'Computers']: 5 // bag.appleComputers = 5
   <br> &nbsp; &nbsp; 
 };
@@ -253,18 +249,19 @@ let bag = {
         <td>
           <p2>
             function makeUser(name, age) {
-            </br> &nbsp; &nbsp; &nbsp;
+            </br> &nbsp; &nbsp; &nbsp; 
               return {
-              </br> &nbsp; &nbsp; &nbsp;
+              </br> &nbsp; &nbsp; &nbsp; &nbsp;
                 name: name,
-              </br> &nbsp; &nbsp; &nbsp;
+              </br> &nbsp; &nbsp; &nbsp; &nbsp;
                 age: age,
               </br> &nbsp; &nbsp; &nbsp;
                              };
+              </br> &nbsp; &nbsp;
             }
-          </br> &nbsp; &nbsp; &nbsp;
+          </br></br>  &nbsp; &nbsp; &nbsp;
             let user = makeUser("Іван", 30);
-          </br> &nbsp; &nbsp; &nbsp;
+          </br> </br> &nbsp; &nbsp; &nbsp;
             alert(user.name); // Іван
           </br> &nbsp; &nbsp; &nbsp;
           </p2>
@@ -280,15 +277,15 @@ let bag = {
         </br> 
           <p2> 
           function makeUser(name, age) {
-          </br> &nbsp; &nbsp; &nbsp;
+          </br> &nbsp; &nbsp; &nbsp; &nbsp;
             return {
-            </br> &nbsp; &nbsp; &nbsp;
+            </br> &nbsp; &nbsp; &nbsp; &nbsp;
               name, // те ж саме, що name: name
-            </br> &nbsp; &nbsp; &nbsp;
+            </br> &nbsp; &nbsp; &nbsp; &nbsp;
               age,  // те ж саме, що age: age
-            </br> &nbsp; &nbsp; &nbsp;
+            </br> &nbsp; &nbsp; &nbsp;  
              };
-            </br> &nbsp; &nbsp; &nbsp;
+            </br> &nbsp; &nbsp;  
           }
         </br> &nbsp; &nbsp; &nbsp;
         </p2>
@@ -301,13 +298,13 @@ let bag = {
       function makeUser(name, age) {
       </br> &nbsp; &nbsp; &nbsp;
         return {
-        </br> &nbsp; &nbsp; &nbsp;
+        </br> &nbsp; &nbsp; &nbsp; &nbsp;
           name, // або name: name
-        </br> &nbsp; &nbsp; &nbsp;
+        </br> &nbsp; &nbsp; &nbsp; &nbsp;
         age: 30, // звичайний запис
-        </br> &nbsp; &nbsp; &nbsp;
+        </br> &nbsp; &nbsp; &nbsp;  
          };
-        </br> &nbsp; &nbsp; &nbsp;
+        </br>   &nbsp; &nbsp;
       }
     </br> &nbsp; &nbsp; &nbsp;
     </p2>
@@ -346,36 +343,47 @@ alert(obj.__proto__); // [object Object] - значення є об’єктом
   </br>
     
     <p>
-      Перевірка існування властивості, оператор:
+      Перевірка існування властивості:
     </p>
     <table>
       <tr>
         <td>
           <p1>
-          1. Задопомогою оператора in ("key" in object):
+          1. Задопомогою оператора in ("key" in object) з лапками для ключа та (key in object) без лапок для змінної, яка містить ключ:
           </p1>
-        <br><br> 
+        <br>
            <p2>
           let user = { 
-        </br> &nbsp; &nbsp; 
+        </br> &nbsp; &nbsp; &nbsp; 
           name: "Іван", //значення,
-        </br> &nbsp; &nbsp; 
+        </br> &nbsp; &nbsp; &nbsp; 
           age: 30, //число,
-        </br> &nbsp; &nbsp; 
+        </br> &nbsp; &nbsp; &nbsp; 
           isAdmin: undefined, //undefined,
-        </br> &nbsp; &nbsp; 
+        </br> &nbsp; &nbsp; &nbsp; 
         tel: null, //null
       </br> &nbsp; &nbsp; 
         };
         </br></br> &nbsp; &nbsp; 
-          alert( "age" in user ); // отримано true, user.age існує
+          alert( "age" in user ); // отримано true, ключ user.age існує
       </br> &nbsp; &nbsp; 
-          alert( "blabla" in user ); // отримано false, user.blabla не існує
+          alert( "blabla" in user ); // отримано false,  ключ user.blabla не існує
       </br>
         </p2>
+        <br><br> 
         <p1> 
-            // ключі, які було створено та призначено властивіть також будуть повертати true при перевірці на існування, навіть якщо їм було присвоєно значення undefined або null.
-        </p1>
+          // ключі, які було створено та призначено властивіть також будуть повертати true при перевірці на існування, навіть якщо їм було присвоєно значення undefined або null.
+      </p1>
+      <br><br> 
+           <p2>
+            let user = { age: 30 };
+          </br> &nbsp; &nbsp; 
+            let key = "age"; //присвоєння змінній key значення age з об'єкта user
+          </br> </br> &nbsp; &nbsp; 
+            alert( key in user ); // true, змінній key присвоєна властивість "age" з об'єкта user
+ 
+      </br></br></br>
+        </p2>
         </br> </br>
         <p1> 
          2. Порівняння з undefined (key === undefined):
@@ -385,13 +393,13 @@ alert(obj.__proto__); // [object Object] - значення є об’єктом
           let user = {};// створено пустий об'єкт
         </br> 
         </p2>
-        <p1> 
+        <p1> </br> &nbsp; &nbsp; &nbsp;&nbsp;
           або
         </p1>
       </br> 
         <p2>
         let user = {
-       </br> &nbsp; &nbsp;
+       </br> &nbsp; &nbsp;&nbsp; 
         noSuchProperty: undefined,  // створено  об'єкт з ключом, якому присвоєно значення undefined;
        </br> &nbsp; &nbsp; 
         };
@@ -408,20 +416,203 @@ alert( user.noSuchProperty === undefined ); // повертає значення
       </tr>
     </table>
 
+    
+<p>
+  Цикл "for..in" для перебору ключів об'єкта ( for (key in object) {
+    object( key ); alert( object[key] );   } ) :
+</p>
+<table>
+  <tr>
+    <td>
+      <p1> 
+        Створення об'єкту:
+      </p1>
+       <br>
+      <p2>
+        let user = {
+        </br> &nbsp; &nbsp; &nbsp; 
+          name: "Іван",
+        </br> &nbsp; &nbsp; &nbsp; 
+          age: 30,
+        </br> &nbsp; &nbsp; &nbsp; 
+          isAdmin: true
+        </br> &nbsp; &nbsp; 
+        };
+        </br></br> &nbsp; &nbsp; 
+      </p2> 
+      </br>
+      <p1> 
+          Запуск циклу:
+      </p1>
+      </br>
+      <p2>
+        for (let key in user) {
+        </br> &nbsp; &nbsp;  &nbsp; 
+          alert( key );  // отримуємо ключі - name, age, isAdmin
+        </br> &nbsp; &nbsp;  &nbsp; 
+          alert( user[key] ); // отримуємо значення ключів - Іван, 30, true
+        </br> &nbsp; &nbsp; 
+        }
+      
+    </br> 
+    </p2>
+    <p1> 
+//  let key - змінна, яка буде містити ключі об'єкта user. В циклі for..in змінна key буде приймати значення кожного з ключів об'єкта user по черзі. В результаті alert( key ) виведе на екран всі ключі об'єкта user, а alert( user[key] ) - їх значення.
+    </br> 
+    </p1>
+    </td>
+  </tr>
+</table>
+
+<p>
+  Впорядкування та сортування ключів властивостей в об’єкті:
+</p>
+<table>
+  <tr>
+    <td>
+      <p1> 
+        Стандартне впорядкування вібувається наступним чином:
+      </br> &nbsp; &nbsp; 
+      1. Цілочисельні ключі (5 : ..., 70 : ..., 33 : ..., 40 : ..., 51 : ..., 100 : ...,) сортуються за зростанням (5 : ..., 33 : ..., 40 : ..., 51 : ..., 70 : ..., 100 : ...,).
+    </br> &nbsp; &nbsp; 
+      2. Не цілочисельні ключі, рядки та інші сортуються в порядку створення.
+    </br> &nbsp; &nbsp; 
+      3. Ключі, які починаються з символу "0" (наприклад "0abc", "0def", "0ghi") сортуються в порядку створення.
+      <br><br>
+      Перетворення на цілочисельний ключ:
+      <br>
+      // Number(...) -- явно перетворює на число
+      <br>
+      // Math.trunc -- вбудована функція, яка видаляє десяткову частину
+      </p1>
+       <br><br>
+       <p2>
+alert( String( Math.trunc( Number("49"))) ); // отримано "49", після перетворення з "49"
+</br> &nbsp; &nbsp; 
+alert( String( Math.trunc( Number("+49"))) ); // отримано "49", після перетворення з "+49" 
+</br> &nbsp; &nbsp; 
+alert( String( Math.trunc( Number("1.2")))); // отримано "1", після перетворення з "1.2"  
+      </p2> 
+      <br>
+     </td>
+  </tr>
+</table>
+
+<p>
+  Висновок:
+</p>
+<table>
+  <tr>
+    <td>
+      <p1> 
+        Об’єкти – це асоціативні масиви з рядом додаткових можливостей.
+      </br></br>  
+        Вони зберігають властивості (пари ключ-значення), де:
+      </br>      
+        * Ключі властивостей повинні бути рядками або символами (зазвичай рядками).
+      </br> 
+        * Значення можуть бути будь-якого типу.
+      </br> </br> 
+        Щоб отримати доступ до властивості, ми можемо використовувати:
+      </br> 
+        * Запис через крапку: obj.property.
+      </br> 
+        * Квадратні дужки obj["property"]. Квадратні дужки дозволяють взяти ключ зі змінної, наприклад, obj[varWithKey].
+      </br> </br> 
+        Додаткові оператори:
+      </br> 
+        * Видалення властивості: delete obj.prop.
+      </br> 
+        * Перевірка існування властивості: "key" in obj.
+      </br> 
+        * Перебір властивостей об’єкта: цикл for (let key in obj).
+      </br> </br> 
+        Те, що ми вивчали в цьому розділі, називається “простим об’єктом” або просто Object.
+      </br> </br> 
+        В JavaScript є багато інших типів об’єктів:
+      </br> 
+        * Array для зберігання впорядкованих колекцій даних,
+      </br> 
+        * Date для зберігання інформації про дату і час,
+      </br> 
+        * Error для зберігання інформації про помилку.
+      </br> 
+        * … і так далі.
+      </br> </br> 
+        У них є свої особливості, які ми вивчимо пізніше. Іноді люди говорять щось на кшталт “тип даних Array” або “тип даних Date”, але формально вони не є окремими типами, а належать до типу даних "Object". Вони лише розширюють його різними способами.
+      </br> </br> 
+        Об’єкти в JavaScript дуже потужні. Тут ми тільки трохи заглибилися в дійсно величезну тему. Ми будемо тісно працювати з об’єктами та дізнаємося про них більше в наступних частинах посібника.
+    <br> 
+        </p1>
+    <br>
+     </td>
+  </tr>
+</table>
+
+
+<p>
+  Тест на перевірку наявності ключів в об'єкті:
+</p>
+<table>
+  <tr>
+    <td>
+      <p1> 
+        Цикл по ключам об'єкта:
+      </br> &nbsp; &nbsp; 
+        * якщо є хоч один ключ  - повертає false
+      </br> &nbsp; &nbsp; 
+        * якщо ключі відсутні - повертає true
+      </br> 
+      </p1>
+
+      <p2>
+      
+function isEmpty(obj) {
+</br> &nbsp; &nbsp; 
+    for (let key in obj) {
+  </br> &nbsp; &nbsp;  &nbsp;
+    return false;
+  </br> &nbsp; &nbsp; &nbsp;
+  }
+</br> &nbsp; &nbsp; 
+    return true;
+</br> &nbsp; 
+}
+      </p2>
+      </td>
+      </tr> 
+      </table>
+
+ 
+
+*****
+Підсумувати значення об'єкта:
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+
+function sumSalaries(salaries) {
+  let sum = 0;
+  for (let key in salaries) {
+    sum += salaries[key];
+  }
+  return sum;
+}
+
+alert (sumSalaries(salaries)); 
+******
 
 
 
 
 
-
-
-    <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
-    <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
 
 
   <br>
   <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
-  
+
   <script src="script_ObjectJS.js"></script>
   <div class="btn-up btn-up_hide"></div>
 
