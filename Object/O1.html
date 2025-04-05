@@ -343,9 +343,70 @@ alert(obj.__proto__); // [object Object] - значення є об’єктом
         </td>
       </tr>
     </table>
-
-
-
+  </br>
+    
+    <p>
+      Перевірка існування властивості, оператор:
+    </p>
+    <table>
+      <tr>
+        <td>
+          <p1>
+          1. Задопомогою оператора in ("key" in object):
+          </p1>
+        <br><br> 
+           <p2>
+          let user = { 
+        </br> &nbsp; &nbsp; 
+          name: "Іван", //значення,
+        </br> &nbsp; &nbsp; 
+          age: 30, //число,
+        </br> &nbsp; &nbsp; 
+          isAdmin: undefined, //undefined,
+        </br> &nbsp; &nbsp; 
+        tel: null, //null
+      </br> &nbsp; &nbsp; 
+        };
+        </br></br> &nbsp; &nbsp; 
+          alert( "age" in user ); // отримано true, user.age існує
+      </br> &nbsp; &nbsp; 
+          alert( "blabla" in user ); // отримано false, user.blabla не існує
+      </br>
+        </p2>
+        <p1> 
+            // ключі, які було створено та призначено властивіть також будуть повертати true при перевірці на існування, навіть якщо їм було присвоєно значення undefined або null.
+        </p1>
+        </br> </br>
+        <p1> 
+         2. Порівняння з undefined (key === undefined):
+        </p1>
+      </br> 
+        <p2>
+          let user = {};// створено пустий об'єкт
+        </br> 
+        </p2>
+        <p1> 
+          або
+        </p1>
+      </br> 
+        <p2>
+        let user = {
+       </br> &nbsp; &nbsp;
+        noSuchProperty: undefined,  // створено  об'єкт з ключом, якому присвоєно значення undefined;
+       </br> &nbsp; &nbsp; 
+        };
+      </br> &nbsp; &nbsp; 
+      </br> &nbsp; &nbsp; 
+alert( user.noSuchProperty === undefined ); // повертає значення true в обох випадках
+</br> 
+</p2>
+<p1> 
+// значення true означає, що такої властивості немає або noSuchProperty призначено значення undefined (noSuchProperty: undefined, ). Якщо значення існує та не дорівнює undefined, то повертається false.
+        </br> 
+        </p1>
+        </td>
+      </tr>
+    </table>
 
 
 
@@ -360,6 +421,7 @@ alert(obj.__proto__); // [object Object] - значення є об’єктом
 
   <br>
   <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
+  
   <script src="script_ObjectJS.js"></script>
   <div class="btn-up btn-up_hide"></div>
 

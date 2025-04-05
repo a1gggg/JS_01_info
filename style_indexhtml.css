@@ -54,7 +54,7 @@ table {
   background-color: rgba(255, 255, 255, 0.8); /* Колір фону */
   max-width: auto; /* Максимальна ширина таблиці */
   min-width: 100%; /* Мінімальна ширина таблиці */
-  word-break: break-all;
+  word-break: break-word; /* Перенос слів, а якщо виставити break-all буде перенос по буквам*/ 
 }
 h1 {
   font-family: 'Courier New', Courier, monospace;
@@ -107,14 +107,4 @@ background-size: 100% 100%;
   .btn-up:hover {
     background-color: rgb(125, 125, 125);
   }
-}
-
-div#binary-hours, div#binary-minutes, div#binary-seconds {
-  font-family: 'webdings', webding;
-  font-size: 15px;
-  color: rgb(0, 0, 0);
-  margin-top: 0px;
-  margin-left: 0%;
-  font-weight: bold;
-  text-align: left;
 }
