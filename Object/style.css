@@ -19,7 +19,8 @@ p2 {
   /**outline: 2px solid #000; /* Чорна рамка */
   /**border: 3px solid #fff; /* Біла рамка */
   /**border-radius: 1px; /* Радіус округлення */
-  font-style: italic
+  font-style: italic;
+  word-break: break-word; /* Перенос слів, а якщо виставити break-all буде перенос по буквам*/ 
 }
 
 p1 {
@@ -35,7 +36,8 @@ p1 {
   /**outline: 2px solid #000; /* Чорна рамка */
   /**border: 3px solid #fff; /* Біла рамка */
   /**border-radius: 1px; /* Радіус округлення */
-  font-style: italic
+  font-style: italic;
+  word-break: break-word; /* Перенос слів, а якщо виставити break-all буде перенос по буквам*/ 
 }
 p {
   font-family: 'Courier New', Courier, monospace;
@@ -44,6 +46,7 @@ p {
   margin-top: 20px;
   margin-left: 1%;
   font-weight: bold;
+  word-break: break-word; /* Перенос слів, а якщо виставити break-all буде перенос по буквам*/ 
 }
 table {
   border-collapse: collapse; /* Зливаючи рамки */
@@ -63,6 +66,7 @@ h1 {
   margin-top: 0%;
   margin-left: 0%;
   font-weight: bold;
+  word-break: break-word; /* Перенос слів, а якщо виставити break-all буде перенос по буквам*/ 
 }
 button {
   font-family: 'Courier New', Courier, monospace;
