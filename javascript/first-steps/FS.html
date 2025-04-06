@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вступ</title>
+  <h1>Вступ</h1>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
+
+  <p>
+    Підключення скриптів у HTML-документі:
+  </p>
+  <table>
+    <tr>
+      <td>
+        <p1>
+          1. З зовнішнього файлу:
+        </p1>
+        <p2>
+          <code>
+            < sсript src="/path/to/script.js">< /sсript>
+          </code>
+        </p2>
+          <br>
+    <p1>
+        2. Зберігання в середині файлу html:
+    </p1>
+      <p2>
+        <code>
+        < script>  ...  < /script>  
+        </code>
+      </p2>
+      <br>
+      <p1>
+        3. З зовнішнього сайту::
+    </p1>
+      <p2>
+        <code>
+          < script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js">< /script>
+        </code>
+      </p2>
+    </td>
+  </tr>
+</table>
+
+
+
+
+<p>
+  Суворий режим “use strict”:
+</p>
+<table>
+  <tr>
+    <td>
+      <p1>
+        Для активації суворого режиму в JavaScript, ви можете використовувати директиву "use strict" або 'use strict'. Це дозволяє вам вказати, що ви хочете використовувати строгий режим для вашого коду. Суворий режим допомагає уникнути деяких помилок і небажаних поведінок у JavaScript.
+      </p1>
+    </br>
+      <p2>
+        "use strict";
+      </br> &nbsp;  &nbsp;  
+        // цей код працюватиме у сучасному режимі
+      </br> &nbsp;  &nbsp;  
+        ...
+      </p2>
+        <br>
+  </td>
+</tr>
+</table>
+
+
+<p>
+  Змінні:
+</p>
+<table>
+  <tr>
+    <td>
+
+<p1>
+Створення:
+</p1>
+<p2>
+<br>&nbsp;  &nbsp;  
+let x = 5; // змінна x має значення 5 (може бути змінена)
+<br>&nbsp;  &nbsp;  
+var x = 5; // змінна x має значення 5 (може бути змінена)
+<br>&nbsp;  &nbsp;  
+const x = 5; // константа x має значення 5 (не може бути змінена)
+<br>
+</p2><br>
+<p1>
+Виклик:
+</p1>
+<p2> 
+  <br>&nbsp;  &nbsp;  alert(x); // виведе 5
+</p2><br><br>
+<p1>
+Перезапис значення змінної:
+</p1><br>
+<p2> 
+let x; // оголошення змінної без ініціалізації
+<br><br>&nbsp;  &nbsp;
+x = 'Привіт!'; // присвоєння значення 'Привіт!
+<br>&nbsp;  &nbsp;
+alert(x); // виведе 'Привіт!'
+<br><br>&nbsp;  &nbsp;
+x = 'Світ!'; // значення змінено на 'Світ!' (змінна може бути зміненою, якщо вона створена за допомогою синтаксису let або var. Якщо змінна створена за допомогою const, то її значення не може бути змінено)
+<br>&nbsp;  &nbsp;
+alert(x); // виведе 'Світ!'
+</p2>
+<br><br>
+
+<p1>
+  Присвоєння змінній значення іншої змінної:
+  </p1><br>
+  <p2> 
+  let x = 10;  
+  <br>&nbsp;  &nbsp;
+  let у = 5;  
+  <br>&nbsp;  &nbsp;
+  x = y; // присвоєння значення у змінній x;
+  <br><br>&nbsp;  &nbsp;
+  alert(x); // виведе 5;
+  </p2>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+</br> &nbsp; &nbsp; &nbsp;
+
+
+  <br>
+  <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
+
+  <script src="script_ObjectJS.js"></script>
+  <div class="btn-up btn-up_hide"></div>
+
+  <script>
+    const btnUp = {
+      el: document.querySelector('.btn-up'),
+      show() {
+        // удалим у кнопки класс btn-up_hide
+        this.el.classList.remove('btn-up_hide');
+      },
+      hide() {
+        // добавим к кнопке класс btn-up_hide
+        this.el.classList.add('btn-up_hide');
+      },
+      addEventListener() {
+        // при прокрутке содержимого страницы
+        window.addEventListener('scroll', () => {
+          // определяем величину прокрутки
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+          scrollY > 400 ? this.show() : this.hide();
+        });
+        // при нажатии на кнопку .btn-up
+        document.querySelector('.btn-up').onclick = () => {
+          // переместим в начало страницы
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+    btnUp.addEventListener();
+    </script>
+</body>
+</html>
