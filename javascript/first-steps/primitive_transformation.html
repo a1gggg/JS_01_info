@@ -14,29 +14,29 @@
 
 <p>
 Функції для перетворення типів:</br> 
-value = String(value); // перетворення на string(рядок)</br></br> 
-value = Number(value); // перетворення на number(число), якщо рядок не є дійсним числом, повертає NaN.</br> 
+&nbsp;value = String(value); // перетворення на string(рядок)</br></br> 
+&nbsp;value = Number(value); // перетворення на number(число), якщо рядок не є дійсним числом, повертає NaN.</br> 
 Правила перетворення на числа:</br> 
-undefined перетворюється в	NaN</br> 
-null перетворюється в	0</br> 
-true та false	перетворюється в 1 та 0</br> 
-string	перетворюється в Пробільні символи (пробіли, символи табуляції \t, символи нового рядку \n тощо) на початку та з кінця видаляються. Якщо рядок, що залишився в результаті, порожній, то результатом є 0. В іншому випадку число “читається” з рядка. Помилка дає NaN.</br>
+&nbsp;undefined перетворюється в	NaN</br> 
+&nbsp;null перетворюється в	0</br> 
+&nbsp;true та false	перетворюється в 1 та 0</br> 
+&nbsp;string	перетворюється в Пробільні символи (пробіли, символи табуляції \t, символи нового рядку \n тощо) на початку та з кінця видаляються. Якщо рядок, що залишився в результаті, порожній, то результатом є 0. В іншому випадку число “читається” з рядка. Помилка дає NaN.</br>
 Приклади:</br>
-alert( Number("   123   ") ); // 123</br>
-alert( Number("123z") );      // NaN (помилка читання числа на місці символу "z")</br>
-alert( Number(true) );        // 1</br>
-alert( Number(false) );       // 0</br></br>
-value = Boolean(value) // перетворення на булевий тип true або false</br>
+&nbsp;&nbsp;alert( Number("   123   ") ); // 123</br>
+&nbsp;&nbsp;alert( Number("123z") );      // NaN (помилка читання числа на місці символу "z")</br>
+&nbsp;&nbsp;alert( Number(true) );        // 1</br>
+&nbsp;&nbsp;alert( Number(false) );       // 0</br></br>
+&nbsp;value = Boolean(value) // перетворення на булевий тип true або false</br>
 Правила перетворення:</br> 
-Значення, які інтуїтивно “порожні”, такі як 0, порожній рядок, null, undefined та NaN, стають false.</br> 
-Інші значення стають true.</br> 
+&nbsp;Значення, які інтуїтивно “порожні”, такі як 0, порожній рядок, null, undefined та NaN, стають false.</br> 
+&nbsp;Інші значення стають true.</br> 
 Приклади:</br> 
-alert( Boolean(1) ); // true</br> 
-alert( Boolean(0) ); // false</br> 
-alert( Boolean("вітаю") ); // true</br> 
-alert( Boolean("") ); // false</br> 
-alert( Boolean("0") ); // true</br> 
-alert( Boolean(" ") ); // пробіли, також true (будь-які непусті рядки є true)</br> </br> 
+&nbsp;&nbsp;alert( Boolean(1) ); // true</br> 
+&nbsp;&nbsp;alert( Boolean(0) ); // false</br> 
+&nbsp;&nbsp;alert( Boolean("вітаю") ); // true</br> 
+&nbsp;&nbsp;alert( Boolean("") ); // false</br> 
+&nbsp;&nbsp;alert( Boolean("0") ); // true</br> 
+&nbsp;&nbsp;alert( Boolean(" ") ); // пробіли, також true (будь-які непусті рядки є true)</br> </br> 
 Підсумки</br> 
 Три найпоширеніші перетворення типів — це перетворення на рядок, на число та на булевий тип.</br> 
 Перетворення на рядок – Відбувається, коли ми щось виводимо. Може бути виконане за допомогою String(value). Перетворення на рядок звичайно очевидне для примітивних значень.</br> 
