@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Базові математичні оператори</title>
+  <h1>Базові математичні оператори</h1>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
+
+
+
+<p>
+Термінологія:</br>
+Операнд - те до чого застосовується оператор(аргумент). // наприклад у виразі 1+1, операндами будуть 1 та 1</br>  
+Оператор(аргумент) - дія, у вигляді символу (+, -, *, / і т.д.), яка застосовується до операнда. // наприклад у виразі 1+1, операндом буде унарний + </br>
+Оператори є двох видів:</br>
+Унарні - застосовується до одного операнда. // У виразі let x = 1; x = -x; alert( x ); // -1, було застосоване унарне заперечення/</br>
+Бінарний - оператор застосовується до двох операндів. // У виразі 1 + 1, бінарний оператор "+" застосовується до двох операндів 1 та 1.</br></br>
+Математичні оператори в JavaScript:</br>
+Додавання +,</br>
+Віднімання -,</br>
+Множення *,</br>
+Ділення /,</br>
+Остача від ділення %,</br>
+Піднесення до степеня **.</br></br>
+
+Додавання +</br></br>
+
+Віднімання -</br></br>
+
+Множення *</br></br>
+
+Ділення /</br></br>
+
+Остача від ділення %</br></br>
+  Результатом a % b є остача цілочислового ділення a на b</br>
+    alert( 5 % 2 ); // 1 - остача від ділення 5 на 2</br>
+    alert( 8 % 3 ); // 2 - остача від ділення 8 на 3</br>
+    alert( 8 % 4 ); // 0 - остача від ділення 8 на 4</br></br>
+Піднесення до степеня **.</br>
+&nbsp;Піднесення до степеня a ** b множить a саме на себе b разів. </br>
+  &nbsp;&nbsp;alert( 2 ** 2 ); // 2² = 4</br>
+  &nbsp;&nbsp;alert( 2 ** 3 ); // 2³ = 8</br>
+  &nbsp;&nbsp;alert( 2 ** 4 ); // 2⁴ = 16</br>
+  &nbsp;Так само як у математиці, оператор піднесення також можна використовувати для дробових чисел.</br>
+  &nbsp;Наприклад, квадратний корінь це піднесення до степеня ½:</br>
+  &nbsp;&nbsp;alert( 4 ** (1/2) ); // 2 (степінь 1/2 — це теж саме, що квадратний корінь)</br>
+  &nbsp;&nbsp;alert( 8 ** (1/3) ); // 2 (степінь 1/3 — це теж саме, що кубічний корінь)</br>
+</br></br>
+
+
+
+
+</p>
+</br> &nbsp; &nbsp; &nbsp;
+
+
+  <br>
+  <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
+
+  <script src="script_ObjectJS.js"></script>
+  <div class="btn-up btn-up_hide"></div>
+
+  <script>
+    const btnUp = {
+      el: document.querySelector('.btn-up'),
+      show() {
+        // удалим у кнопки класс btn-up_hide
+        this.el.classList.remove('btn-up_hide');
+      },
+      hide() {
+        // добавим к кнопке класс btn-up_hide
+        this.el.classList.add('btn-up_hide');
+      },
+      addEventListener() {
+        // при прокрутке содержимого страницы
+        window.addEventListener('scroll', () => {
+          // определяем величину прокрутки
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+          scrollY > 400 ? this.show() : this.hide();
+        });
+        // при нажатии на кнопку .btn-up
+        document.querySelector('.btn-up').onclick = () => {
+          // переместим в начало страницы
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+    btnUp.addEventListener();
+    </script>
+</body>
+</html>
