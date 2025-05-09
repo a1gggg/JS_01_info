@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оператори порівняння</title>
+  <h1>Оператори порівняння</h1>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
+<p>
+Оператори:</br>
+&nbsp;Більше/менше: a > b, a < b.</br></b.>
+&nbsp;Більше/менше або дорівнює: a >= b, a <= b.</br>
+&nbsp;Дорівнює: a == b. Зверніть увагу, для порівняння потрібно використовувати два знаки рівності ==. Один знак рівності a = b означав би присвоєння.</br>
+&nbsp;Не дорівнює:   a != b.</br></br>
+
+
+
+
+
+</p>
+</br> &nbsp; &nbsp; &nbsp;
+
+
+  <br>
+  <button onclick="history.back()">ПОВЕРНУТИСЬ</button>
+
+  <script src="script_ObjectJS.js"></script>
+  <div class="btn-up btn-up_hide"></div>
+
+  <script>
+    const btnUp = {
+      el: document.querySelector('.btn-up'),
+      show() {
+        // видалимо клас btn-up_hide
+        this.el.classList.remove('btn-up_hide');
+      },
+      hide() {
+        // добавимо до кнопки клас btn-up_hide
+        this.el.classList.add('btn-up_hide');
+      },
+      addEventListener() {
+        // при прокрутка змісту сторінки
+        window.addEventListener('scroll', () => {
+          // встановлюємо величину прокрутки
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          // якщо сторінка прокручена більша чим на 400px, то робимо кнопку видимою, або приховуємо
+          scrollY > 400 ? this.show() : this.hide();
+        });
+        // при натисканні на кнопку .btn-up
+        document.querySelector('.btn-up').onclick = () => {
+          // переміщаємо на початок сторінки
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+    btnUp.addEventListener();
+    </script>
+</body>
+</html>
