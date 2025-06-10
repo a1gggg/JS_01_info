@@ -4,25 +4,25 @@
     "target": "ES2020", // актуальний стандарт
     "useDefineForClassFields": true, // нова поведінка класів
     "lib": ["ES2020", "DOM", "DOM.Iterable"], // бібліотеки які використовуємо
-    "module": "ESNext", // модуль рекваір require
+    "module": "ESNext", // модуль  імпорту require
     "skipLibCheck": true, // пропускаємо перевірку декларативних файлів для пришвидшення компіляції
 
-    /* Bundler mode */
+    /* Bundler mode (оптимізація модулей під сборщики)*/
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "allowImportingTsExtensions": true, // дозволяє імпортувати модулі з розширенням ts
+    "resolveJsonModule": true, // дозволяє імпортувати json файли
+    "isolatedModules": true, // дозволяє окремо опрацьовувати імпорти типів від звичайних імпортів для кращої компіляції
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": true, // при перевірці ts коду файл не буде генеруватись
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "strict": true, // жорсткий мод
+    "noUnusedLocals": true, // якщо будуть створені локальні змінні, які ніде не застосовані, буде виникати помилка. для чистоти коду та видалення зайвих змінних.
+    "noUnusedParameters": true, // якщо будуть створені аргументи функції, які ніде не застосовані, буде виникати помилка. для чистоти коду та видалення зайвих аргументів.
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": true, // виникатиме помилка, якщо в конструкціях Switch буде відсутній break.
     "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
