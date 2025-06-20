@@ -149,3 +149,33 @@ const strLength: number = (someValue as string).length
 // ми затверджуємо, що someValue є типу string  та отримуємо поле ).length 
 
 /*Generic (узагальнення)*/
+function getCar <T>(params:T): T { //T це тип
+  return params
+}
+getCar("string") // T стає string
+getCar(Number(1)) // Т стає number
+
+function getCarN <T extends string>(params:T): T { //T це тип, який по замовчуванню обов'язково буде string
+  return params
+}
+getCarN("string") // T стає string
+getCarN(Number(1)) // Т викликає помилку
+
+/*Utility Types*/
+//дозволяє трансформувати типи всередині інтерфейсів
+
+interface infoForUser2<> {
+  name: string,
+  age: number,
+  isAdmin: boolean,
+} 
+const myProfile2: Pick<infoForUser2, 'name'> = {
+name: "Ruslan",
+}
+//Pick<infoForUser2, ''> дозволяє отримати окремі поля.
+//Omit<infoForUser2, ''> дозволяє прибрати окремі поля.
+//Partial<infoForUser2> роблять поля не обов'язковими.
+//Required<infoForUser2> роблять поля обов'язковими, якщо вони раніше були не обов'язковими напр. name?: string,.
+//Readonly<infoForUser2> роблять поля тільки для читання та не дозволяє редагувати.
+// Можна комбінувати Readonly<Pick<infoForUser2, ''>>
+//Record <string, number>, який зобов'язує (age: number) age бути рядком, а number числом, типи в рекорд можна змінювати
