@@ -39,6 +39,16 @@ function getYouName(name:string): string {
 }
 getYouName("Ruslan")
 
+let f1s = ():string => "f1s";
+let sayHi = ():any => alert("Привіт");
+let double = (n=1):number => n * 2;
+
+let sum = function(a=0, b=0):number {
+  let result = a + b;
+
+  return result;
+};
+
 function getYouAge(my1Name:string): number {
   return 35;
 }
@@ -159,7 +169,7 @@ function getCarN <T extends string>(params:T): T { //T це тип, який п�
   return params
 }
 getCarN("string") // T стає string
-getCarN(Number(1)) // Т викликає помилку
+//getCarN(Number(1)) // Т викликає помилку
 
 /*Utility Types*/
 //дозволяє трансформувати типи всередині інтерфейсів
