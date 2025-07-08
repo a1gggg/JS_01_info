@@ -28,6 +28,19 @@ const numbersMassive: number[] = [1, 2];
 //або
 const numbersMassive2: Array<number> = [1, 2];
 
+//Приклад:
+var newArr:number[][] = [
+  [5, 6], 
+  [7, 8],
+];
+console.log(`другий елемент в першому підмасиві ` + newArr[0][1]); // повертає другий елемент в першому підмасиві;
+console.log(`кількість елементів в масиві - в цьому випадку маємо 2 масиви `+ newArr.length); //повертає кількість елементів в масиві;
+
+newArr [1][0] = 0; // змінює 7 на 0;
+console.log('значення з індексом 1, 2 є ' + newArr[1][0]);// тепер значення з індексом 1, 2 є 0;
+
+
+
 //кортежі 
 const numbersMassive1: [number, string] = [10, "string"];
 const numbersMassive4: [string, string] = ["10", "string"];
