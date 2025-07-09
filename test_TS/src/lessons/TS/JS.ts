@@ -1,4 +1,4 @@
-/*компілатор ts файлів - tsc myFile.ts
+/*компілятор ts файлів - tsc myFile.ts
 
 1. Встановлення TypeScript:
 Перед використанням команди tsc потрібно переконатися, що TypeScript встановлено глобально в системі. Це можна зробити за допомогою менеджера пакетів npm (Node Package Manager): npm install -g typescript. 
