@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- додаємо css стилі для mocha, щоб вивести результати -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- додаємо фреймворк mocha до коду -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // вмикаємо тестування у bdd стилі
+  </script>
+  <!-- додаємо chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai має багато всього, давайте зробимо assert глобальним
+    let assert = chai.assert;
+  </script>
+</head>
+
+<body>
+  <!-- посилання на файл зі скриптом -->
+  <script src="function.js"></script>
+
+  <!-- скрипт з тестами (describe, it...) -->
+  <script src="testM.js"></script>
+
+  <!-- елемент з id="mocha" буде містити результати тестів -->
+  <div id="mocha"></div>
+
+  <!-- запускаємо тести! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>
+
+<!-- 
+<head> містить сторонні бібліотеки та стилі для тестів.
+<script> містить код функції, яку треба тестувати, в нашому випадку – код функції pow.
+Тести – в нашому випадку зовнішній скрипт test.js, який містить специфікацію describe("pow", ...), описану вище.
+HTML елемент <div id="mocha"> буде використаний фреймворком Mocha для виведення результатів.
+Тести запускаються командою mocha.run().
+-->
+
+<!-- 
+Mocha – базовий фреймворк: він забезпечує нас загальними функціями для тестування, в тому числі describe та it, а також головною функцією, що виконує тести. https://mochajs.org/
+
+Chai – бібліотека для порівняння і оцінки роботи коду. Вона дозволяє використовувати безліч різних порівнянь, але поки що нам потрібне лише функція порівняння assert.equal. https://chaijs.com/
+
+Sinon – бібліотека для “шпигування” за функціями, емуляції вбудованих функцій тощо, нам це знадобиться набагато пізніше. https://sinonjs.org/
+-->
