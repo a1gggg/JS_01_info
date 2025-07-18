@@ -39,5 +39,5 @@
   "outDir": "./src", // папка куди будуть компілюватись фали JS
   "rootDir": "./src", // папка де будуть знаходитись фали TS
 
-  "include": ["src"]
+  "include": ["src", "src/test.js"]
 }
