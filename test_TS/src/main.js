@@ -12,4 +12,5 @@ function makeUser() {
 }
 
 let user = makeUser();
-console.log(user.fun().name)
+console.log(user.fun().name)  
+//
