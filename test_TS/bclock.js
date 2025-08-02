@@ -6,7 +6,7 @@ function binaryClock() {
 
   // Функція для перетворення числа в двійкове представлення
   function toBinary(num) {
-    return num.toString(2).padStart(6, '0'); // Додаємо початкові нулі для вирівнювання
+    return num.toString(2).padStart(6, "0"); // Додаємо початкові нулі для вирівнювання
   }
 
   // Перетворюємо години, хвилини та секунди в двійкові рядки
@@ -15,9 +15,9 @@ function binaryClock() {
   const binarySeconds = toBinary(seconds);
 
   // Виводимо двійковий час на сторінку
-  document.getElementById('binary-hours').textContent = binaryHours;
-  document.getElementById('binary-minutes').textContent = binaryMinutes;
-  document.getElementById('binary-seconds').textContent = binarySeconds;
+  document.getElementById("binary-hours").textContent = binaryHours;
+  document.getElementById("binary-minutes").textContent = binaryMinutes;
+  document.getElementById("binary-seconds").textContent = binarySeconds;
 }
 
 // Оновлюємо годинник кожну секунду

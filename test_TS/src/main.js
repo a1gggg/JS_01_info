@@ -1,9 +1,15 @@
-/** Цикл масиву */
+'use strict'
  
-let arrNumber = [1, 3, 5, 7, 9, 88];
-
-for (let i = 0; i < arrNumber.length; i++){
-  //if (arrNumber[i] == 5) break;
-  console.log (arrNumber[i]);
-
+function makeUser() {
+  return {
+    name: "Іван",
+    age: 30,
+    ref: this,
+    fun (){
+      return this
+    }
+  };
 }
+
+let user = makeUser();
+console.log(user.fun().name)
